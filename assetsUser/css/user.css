@@ -1,0 +1,118 @@
+
+.movie-card {
+    flex: 0 0 auto; /* Memberikan fleksibilitas untuk menyesuaikan ukuran buku */
+    margin-right: 10px; /* Menambahkan margin antara buku */
+}
+.movie-card .card-head {
+    position: relative;
+    height: 210px;
+    border-radius: 15px;
+    overflow: hidden;
+  }
+
+.movies-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+   
+  }
+  
+  .movie-card {
+    /**
+     * variable for scaling overlay element on card hover 
+     */
+    --scale: 0.8;
+  
+    cursor: pointer;
+  }
+  
+ .card-image{
+    width: 200px; /* Sesuaikan lebar gambar */
+    height: 200px; /* Sesuaikan tinggi gambar */
+    border-radius: 5px; /* Memberikan sudut melengkung pada gambar (opsional) */
+    object-fit: cover; /* Memastikan gambar tidak terdistorsi */
+ }
+  
+  .movie-card:hover .card-img { transform: scale(1.1); }
+  
+  .movie-card .card-overlay {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    backdrop-filter: blur(5px);
+  }
+  
+  .movie-card:hover .card-overlay { opacity: 1; }
+  
+  .movie-card .bookmark,
+  .movie-card .rating {
+    position: absolute;
+    top: 15px;
+    padding: 6px;
+    border-radius: 10px;
+    color: var(--light-azure);
+    transform: scale(var(--scale));
+  }
+  
+  .movie-card .bookmark {
+    background: var(--oxford-blue);
+    left: 15px;
+  }
+  
+  .movie-card .bookmark:hover { color: var(--yellow); }
+  
+  .movie-card .rating {
+    display:     flex;
+    align-items: center;
+    right: 15px;
+    background: var(--oxford-blue-50);
+  }
+  
+  .movie-card .rating span {
+    color: var(--white);
+    font-size: 13px;
+    font-weight: var(--fw-5);
+    margin-left: 5px;
+  }
+  
+  .movie-card ion-icon {
+    font-size: 16px;
+    display: block;
+    --ionicon-stroke-width: 50px;
+  }
+  
+  .movie-card .play {
+    position: absolute;
+    top:  50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(var(--scale));
+  }
+  
+  .movie-card .play ion-icon {
+    font-size: 60px;
+    --ionicon-stroke-width: 20px;
+  }
+  
+  .movie-card:hover :is(.bookmark, .rating, .play) { --scale: 1; }
+  
+  .movie-card .card-title {
+    font-size: var(--fs-md);
+    font-weight: var(--fw-5);
+    margin-bottom: 5px;
+  }
+  
+  .movie-card:hover .card-title { color: var(--light-azure); }
+  
+  .movie-card .card-info {
+    display: flex;
+    font-size: var(--fs-x-sm);
+    font-weight: var(--fw-5);
+  }
+  
+  .movie-card .genre { margin-right: 8px;
+ }
+
+  
+
+
+
+

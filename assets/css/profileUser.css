@@ -1,0 +1,113 @@
+.navbar {
+    height: 100px;
+    display:         flex;
+    justify-content: space-between;
+    align-items:     center;
+  }
+  
+  /**
+   * small screen menu button style 
+   */
+  
+  .navbar-menu-btn { display: none; }
+  
+  /**
+   * navbar navigation style 
+   */
+  
+  nav { margin-right: 200px; }
+  
+  .navbar-nav { display: flex; }
+  
+  .navbar-nav li:not(:last-child) { margin-right: 60px; }
+  
+  .navbar-link {
+    font-size: var(--fs-sm);
+    font-weight: var(--fw-5);
+  }
+  
+  .navbar-link:hover { color: var(--light-azure); }
+  
+  /**
+   * live indicator style 
+   */
+  
+  .indicator { position: relative; }
+  
+  .indicator::after {
+    content: '';
+    background: var(--live-indicator);
+    position: absolute;
+    top:   calc(50% - 1px);
+    right: -15px;
+    width:  4px;
+    height: 4px;
+    box-shadow: 0 0 0 2px var(--live-indicator-shadow);
+    border-radius: 5px;
+  }
+  
+  /**
+   * navbar form & button style 
+   */
+  
+  .navbar-actions {
+    display:     flex;
+    align-items: center;
+  }
+  
+  .navbar-form {
+    position: relative;
+    margin-right: 50px;
+  }
+  
+  .navbar-form-search {
+    background: var(--oxford-blue);
+    width: 100%;
+    padding: 12px 20px;
+    border-radius: 15px;
+    color: var(--off-white);
+    font-size: var(--fs-sm);
+    font-weight: var(--fw-5);
+  }
+  
+  .navbar-form-btn {
+    background: var(--oxford-blue);
+    position: absolute;
+    top:   calc(50% - 10px);
+    right: 10px;
+  }
+  
+  .navbar-form-btn ion-icon,
+  .navbar-search-btn ion-icon {
+    font-size: 20px;
+    color: var(--light-azure);
+    --ionicon-stroke-width: 50px;
+  }
+  
+  .navbar-form-btn:hover ion-icon,
+  .navbar-form-search::placeholder { color: var(--off-white); }
+  
+  /**
+   * navbar-form close button & navbar search button
+   * for small device 
+   */
+  
+  .navbar-form-close,
+  .navbar-search-btn { display: none; }
+  
+  .navbar-signin {
+    display:     flex;
+    align-items: center;
+    font-size: var(--fs-sm);
+  }
+  
+  .navbar-signin ion-icon {
+    font-size: 22px;
+    color: var(--light-azure);
+    margin-left: 5px;
+    --ionicon-stroke-width: 30px;
+  }
+  
+  .navbar-signin:hover span { color: var(--light-azure); }
+  
+  /* Add this to your existing CSS file or create a new one */
